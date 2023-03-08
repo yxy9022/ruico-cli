@@ -1,0 +1,38 @@
+{
+  "name": "@ruico/cli",
+  "version": "1.0.0",
+  "description": "Command line interface for rapid Project development",
+  "bin": {
+    "ruico": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yxy9022/ruico-cli.git"
+  },
+  "keywords": [
+    "ruico",
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yxy9022/ruico-cli/issues"
+  },
+  "homepage": "https://github.com/yxy9022/ruico-cli#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^10.0.0",
+    "leven": "^3.1.0",
+    "minimist": "^1.2.8",
+    "semver": "^7.3.8"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
+  }
+}
