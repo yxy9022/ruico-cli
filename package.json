@@ -1,5 +1,5 @@
 {
-  "name": "@ruico/cli",
+  "name": "ruico-cli",
   "version": "1.0.0",
   "description": "Command line interface for quick development",
   "bin": {
