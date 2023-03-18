@@ -3,7 +3,7 @@ const stripAnsi = require('strip-ansi');
 const readline = require('readline');
 const EventEmitter = require('events');
 
-const { stopSpinner } = require('../lib/spinner');
+const { stopSpinner } = require('./spinner');
 
 exports.events = new EventEmitter();
 

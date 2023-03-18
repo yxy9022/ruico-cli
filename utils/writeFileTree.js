@@ -20,19 +20,16 @@ function deleteRemovedFiles(directory, newFiles, previousFiles) {
  * @param {Record<string,string|Buffer>} [previousFiles]
  * @param {Set<string>} [include]
  */
-module.exports = async function writeFileTree(dir, files, previousFiles, include) {
-  // console.log('writeFileTree:',JSON.stringify({dir, files, previousFiles, include}));
-  // if (process.env.VUE_CLI_SKIP_WRITE) {
-  //   return;
-  // }
+module.exports = async function writeFileTree(dir, files, previousFiles) {
   if (previousFiles) {
     await deleteRemovedFiles(dir, files, previousFiles);
   }
+  const projectName = path.basename(dir);
   Object.keys(files).forEach(name => {
-    // if (include && !include.has(name)) return;
     const filePath = path.join(dir, name);
-    console.log(filePath);
-    fs.ensureDirSync(path.dirname(filePath));
-    fs.writeFileSync(filePath, files[name]);
+    const targetPath = path.join(dir, name.replace(/(ruico-template)/, projectName));
+    // console.log(targetPath);
+    fs.ensureDirSync(path.dirname(targetPath));
+    fs.writeFileSync(targetPath, files[name]);
   });
 };

@@ -1,7 +1,8 @@
 const ora = require('ora');
 const chalk = require('chalk');
+const cliSpinners = require('cli-spinners');
 
-const spinner = ora();
+const spinner = ora({ spinner: cliSpinners.line });
 let lastMsg = null;
 let isPaused = false;
 

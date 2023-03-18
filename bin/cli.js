@@ -2,8 +2,8 @@
 
 // Check node version before requiring/doing anything else
 // The user may be on a very old node version
-
-const { chalk, semver } = require('../utils');
+const chalk = require('chalk');
+const semver = require('semver');
 const requiredVersion = require('../package.json').engines.node;
 const leven = require('leven');
 
