@@ -67,7 +67,7 @@ program.on('command:*', ([cmd]) => {
 // add some useful info on help
 program.on('--help', () => {
   console.log();
-  console.log(`  Run ${chalk.cyan(`vue <command> --help`)} for detailed usage of given command.`);
+  console.log(`  Run ${chalk.cyan(`ruico <command> --help`)} for detailed usage of given command.`);
   console.log();
 });
 
