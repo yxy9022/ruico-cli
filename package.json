@@ -1,6 +1,6 @@
 {
   "name": "ruico-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Command line interface for quick development",
   "bin": {
     "ruico": "bin/cli.js"
