@@ -24,7 +24,11 @@ checkNodeVersion(requiredVersion, 'ruico-cli');
 
 const program = require('commander');
 
-program.version(`ruico-cli ${require('../package').version}`).usage('<command> [options]');
+// 允许用户通过 --version 或 -V 选项查看版本信息。
+program.name('ruico').version(`ruico-cli ${require('../package').version}`);
+
+// 定义命令行工具的基础使用格式，并在用户请求帮助信息（如执行 --help 或 -h）时显示。
+program.usage('<command> [options]');
 
 program
   .command('create <app-name>')
